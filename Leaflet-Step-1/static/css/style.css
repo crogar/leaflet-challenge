@@ -9,6 +9,12 @@ html {
   height: 100%;
 }
 
+p {
+  line-height: 0%;
+  margin-bottom:0;
+  margin-top: 0;
+}
+
 .legend {
   padding: 10px;
   line-height: 18px;
@@ -17,10 +23,12 @@ html {
   border-radius: 7px;
 }
 
-.legend i {
+.color {
   display: inline-block;
   width: 20px;
   height: 20px;
   margin-right: 8px;
+  margin-bottom: 0;
+  margin-top: 0px;
   opacity: 0.8;
 }
