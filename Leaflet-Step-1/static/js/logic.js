@@ -72,7 +72,7 @@ d3.json(geojson_url).then(data => {
         var legend = L.control({ position: "bottomright" });
         legend.onAdd = function() {
             var div = L.DomUtil.create("div", "info legend");
-            var limits = ["-10-10", "10-30", "30-50", "50-70", "70-90", ">90"];
+            var limits = ["-10-10", "10-30", "30-50", "50-70", "70-90", "90+"];
             var colors = ["#00FF00", "#e2eb34", "#ebd334", "#eb9f34", "#eb5e34", "#FF0000"];
             var labels = [];
 
