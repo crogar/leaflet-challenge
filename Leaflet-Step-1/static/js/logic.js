@@ -69,4 +69,5 @@ d3.json(geojson_url).then(data => {
 
     // Adding legend div
     var legend = L.control({ position: "bottomright" });
-}); // End reading geoJsaon Data
+}); // End reading geoJson
+
