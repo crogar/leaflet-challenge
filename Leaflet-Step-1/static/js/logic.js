@@ -29,10 +29,10 @@ var myMap = L.map("mapid", {
 let geojson_url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
 L.control.layers(baseMaps).addTo(myMap);
 
-function setcolors(depth){
-    var circleColor = "green";
+function setcolors(depth){ // the color of th circle is determined by the depth of the earthquake "feature.geometry.coordinates[2]"
+    var circleColor = "#00FF00";
     if (depth > 90) {
-        circleColor = "red";
+        circleColor = "#FF0000";
     }
     else if (depth > 70) {
         circleColor = "#eb5e34";
@@ -84,4 +84,3 @@ d3.json(geojson_url).then(data => {
     };
     legend.addTo(myMap); // adding legend to the map
 }); // End reading geoJson
-
