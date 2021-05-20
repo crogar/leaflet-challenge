@@ -51,7 +51,7 @@ function setcolors(depth){
 
 d3.json(geojson_url).then(data => {
     console.log(data);
-    L.geoJSON(data, {
+    L.geoJSON(data, { // allows to process all the data points without having to loop throughout all the values in a loop
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, {
                 fillOpacity: 0.75,
@@ -61,7 +61,7 @@ d3.json(geojson_url).then(data => {
                 weight: 1
             });
         },
-        onEachFeature: function(feature, layer) {
+        onEachFeature: function(feature, layer) { //binding popup
             layer.bindPopup(`<div style="background-color:${setcolors(feature.geometry.coordinates[2])};">${feature.properties.place}<br>Magnitude: ${feature.properties.mag}<br>${new Date(feature.properties.time)}</div>`);
         }
     }).addTo(myMap) 
