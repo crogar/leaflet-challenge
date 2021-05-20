@@ -25,8 +25,11 @@ var myMap = L.map("mapid", {
     zoom: 4,
     layers: [light]
   });
-  
-  // Pass our map layers into our layer control
-  // Add the layer control to the map
+
+let geojson_url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
+
+function setcolors(){
+
+} 
+  // Pass our map layers into our layer control -  Add the layer control to the map
   L.control.layers(baseMaps).addTo(myMap);
-  
