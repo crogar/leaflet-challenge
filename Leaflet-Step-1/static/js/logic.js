@@ -69,5 +69,19 @@ d3.json(geojson_url).then(data => {
 
     // Adding legend div
     var legend = L.control({ position: "bottomright" });
+    legend.onAdd = function() {
+        var div = L.DomUtil.create("div", "info legend");
+        var limits = ["-10-10", "10-30", "30-50", "50-70", "70-90", ">90"];
+        var colors = ["green", "#e2eb34", "#ebd334", "#eb9f34", "#eb5e34", "red"];
+        var labels = [];
+
+    limits.forEach(function(limit, index) {
+        labels.push("<i style=\"background-color: " + colors[index] + "\"> </i>" + limit +  "<br>");
+        });
+    
+        div.innerHTML += labels.join("");
+        return div;
+    };
+    legend.addTo(myMap); // adding legend to the map
 }); // End reading geoJson
 
