@@ -19,3 +19,14 @@ var baseMaps = {
     Dark: dark
   };
   
+// Create map object and set default layers
+var myMap = L.map("mapid", {
+    center: [38.500000, -98.000000],
+    zoom: 5,
+    layers: [light]
+  });
+  
+  // Pass our map layers into our layer control
+  // Add the layer control to the map
+  L.control.layers(baseMaps).addTo(myMap);
+  
