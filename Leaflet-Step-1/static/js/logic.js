@@ -54,16 +54,17 @@ d3.json(geojson_url).then(data => {
     L.geoJSON(data, {
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, {
+                fillOpacity: 0.75,
                 radius: feature.properties.mag*3,
                 fillColor: setcolors(feature.geometry.coordinates[2]),
                 color: "black",
                 weight: 1
             });
         },
-            onEachFeature: function(feature, layer) {
-                layer.bindPopup(`${feature.properties.place}<br>Magnitude: ${feature.properties.mag}<br>${new Date(feature.properties.time)}`);
-            }
-    }).addTo(myMap)
+        onEachFeature: function(feature, layer) {
+            layer.bindPopup(`<div style="background-color:${setcolors(feature.geometry.coordinates[2])};">${feature.properties.place}<br>Magnitude: ${feature.properties.mag}<br>${new Date(feature.properties.time)}</div>`);
+        }
+    }).addTo(myMap) 
+    // End of L.geoJSON() function
 });
-  // Pass our map layers into our layer control -  Add the layer control to the map
 
