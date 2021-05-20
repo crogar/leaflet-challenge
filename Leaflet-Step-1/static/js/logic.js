@@ -79,7 +79,7 @@ d3.json(geojson_url).then(data => {
         limits.forEach(function(limit, index) {
             labels.push("<p><div class=\"color\" style=\"background-color: " + colors[index] + "\"> </div> <span>" + limit +  "</span> </p>");
         });
-        div.innerHTML += labels.join(""); // joining all the tags into on single string 
+        div.innerHTML += labels.join(""); // joining all the tags into one single string 
         return div;
     };
     legend.addTo(myMap); // adding legend to the map
