@@ -22,7 +22,7 @@ var baseMaps = {
 // Create map object and set default layers
 var myMap = L.map("mapid", {
     center: [38.500000, -98.000000],
-    zoom: 5,
+    zoom: 4,
     layers: [light]
   });
   
