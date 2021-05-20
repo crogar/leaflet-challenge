@@ -27,9 +27,14 @@ var myMap = L.map("mapid", {
   });
 
 let geojson_url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
+L.control.layers(baseMaps).addTo(myMap);
 
 function setcolors(){
 
 } 
+
+d3.json(geojson_url).then(data => {
+    console.log(data);
+});
   // Pass our map layers into our layer control -  Add the layer control to the map
-  L.control.layers(baseMaps).addTo(myMap);
+
