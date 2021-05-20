@@ -16,19 +16,20 @@ p {
 }
 
 .legend {
+  align-items: center;
   padding: 10px;
-  line-height: 18px;
+  width: 80px;
+  line-height: 5px;
   color:black;
   background-color: #fff;
   border-radius: 7px;
+  
 }
 
 .color {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 8px;
-  margin-bottom: 0;
-  margin-top: 0px;
+  margin: 0;
   opacity: 0.8;
 }
