@@ -17,6 +17,7 @@ p {
 
 .legend {
   align-items: center;
+  text-align: inherit;
   padding: 10px;
   width: 80px;
   line-height: 5px;
